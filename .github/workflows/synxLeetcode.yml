@@ -1,0 +1,19 @@
+name: Sync Leetcode
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 6"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync
+        uses: joshcai/leetcode-sync@v1.5
+        with:
+          github-token: ${{ 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 }}
+          leetcode-csrf-token: ${{ u15OcmJoehylxmvsqL6lpYZ3v10B6rQbLJ0TpgnVzUKFlHt9n7G3hoG4LhlQ9rt6; expires=Thu, 15 Aug 2024 06:35:03 GMT; Max-Age=31449600; Path=/; SameSite=Lax; Secure }}
+          leetcode-session: ${{ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfYXV0aF91c2VyX2lkIjoiNDc4ODcwNyIsIl9hdXRoX}}
+          destination-folder: my-folder
